@@ -5,6 +5,7 @@ language: node_js
 node_js:
   - 0.10.25
 
+
 # CouchDB binds to 127.0.0.1 by default
 services:
   - rethinkdb
@@ -26,3 +27,4 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+archive: true
